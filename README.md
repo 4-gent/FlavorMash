@@ -1,2 +1,10 @@
-# Yum
+# FlavorMatch
 CS151 Food Tinder Project
+
+Team #4, William Qiao, Marlon Burog, Anne Mai, Lucas Maldonado
+
+Problem: It's hard to find good restaurants nowdays. People don't know where to eat.
+
+Functionality: We will help people find restaurants that they will enjoy by making an app similar to Tinder, but with restaurants instead of people. 
+
+High Level Description: By using traits of the restaurant such as genre of food, price, and popularity, we will create a stack that users can scroll through based on their preferences. The most compatible restaurants will be at the top of the stack, while the least compatible will be at the bottom. We will continually update the stack based on a user's preferences, and if they swipe left or right on certain restaurants. We will create a database and quantify different traits of restaurants, and assign a weighted score to each trait. By adding up the score, we can create a back-end compatibility rating that we will use to create and update the stack for the user.
