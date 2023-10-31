@@ -30,5 +30,9 @@ public class Dish {
         return score;
     }
 
+    public int compareTo(Dish b){
+        return score>b.score?1:-1;
+    }
+
 
 }
