@@ -11,4 +11,8 @@ public class Attribute {
         this.weight = weight;
     }
 
+    public int getWeight(){
+        return weight;
+    }
+
 }
