@@ -1,6 +1,6 @@
 package components;
 import java.util.*;
-public class Dish {
+public class Dish implements Comparable<Dish> {
     private ArrayList<ArrayList<Attribute>> attributes;
     private String address;
     private double score;
@@ -30,9 +30,8 @@ public class Dish {
         return score;
     }
 
-    public int compareTo(Dish b){
-        return score>b.score?1:-1;
+    @Override
+    public int compareTo(Dish o) {
+        return score>o.score?1:-1;
     }
-
-
 }
