@@ -1,7 +1,7 @@
 package components;
 import java.util.*;
 public class Dish implements Comparable<Dish> {
-    private ArrayList<ArrayList<Attribute>> attributes;
+    private ArrayList<Attribute> attributes;
     private String address;
     private double score;
     /**
@@ -16,16 +16,14 @@ public class Dish implements Comparable<Dish> {
     }
 
 
-    public void addAttribute(ArrayList<Attribute> attr){
+    public void addAttribute(Attribute attr){
         attributes.add(attr);
     }
 
     public double calculate(){
         double score = 0.0;
-        for(ArrayList<Attribute> a: attributes){
-            for(Attribute x:a){
-                score+=x.getWeight();
-            }
+        for(Attribute x:attributes){
+            score+=x.getWeight();
         }
         return score;
     }
