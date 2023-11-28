@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Navigation from '../components/Navigation';
+
+function changeBackground(color) {
+  document.body.style.background = color;
+}
 
 const Match = () => {
+
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -21,16 +27,24 @@ const Match = () => {
       });
   }, []); // The empty dependency array ensures that the effect runs only once on component mount
 
-  return (
-    <div style={{backgroundColor:'grey'}}>
-      <h2>Item List</h2>
-      <ul style={{color:'black'}}>
-        {items.map(item => (
-          <li key={item.id}>{item.name}, {item.bio}, {item.address}, {item.dish}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  window.addEventListener("load",function() { changeBackground('#FFF8EF') });
+  
+    return (
+      
+        <div>
+            <nav>
+                <Navigation />
+            </nav>
+            <h2>Item List</h2>
+            <ul style={{color:'black'}}>
+                {items.map(item => (
+                    <li key={item.id}>{item.name}, {item.bio}, {item.address}, {item.dish}</li>
+                ))}
+            </ul>
+            hi
+            
+        </div>
+    );
 };
 
 export default Match;

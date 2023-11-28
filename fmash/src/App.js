@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Main from './main'
 import Swipe from './routes/swipe'
 import Match from './routes/match'
+import Preferences from './routes/preferences'
 
 export default function App(){
   return(
@@ -12,6 +13,7 @@ export default function App(){
         <Route exact path='/' element={<Main />} />
         <Route exact path='/swipes' element={<Swipe />} />
         <Route exact path='/match' element={<Match />} />
+        <Route exact path='/preferences' element={<Preferences />} />
       </Routes>
     </Router>
   )
