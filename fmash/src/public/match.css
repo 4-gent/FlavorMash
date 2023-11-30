@@ -1,0 +1,80 @@
+.prompt{
+    text-align: center;
+    margin-top: 30px;
+    color: #FF7D00;
+}
+.resPicture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: auto;
+}
+.title{
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: #228E9F;
+    margin-bottom: 5vh;
+}
+.top-row{
+    
+}
+.address{
+    background-color: #FF7D00;
+    color: antiquewhite;
+    border-radius: 30px;
+    width: 30vw;
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.price{
+    background-color: #FF7D00;
+    color: antiquewhite;
+    border-radius: 30px;
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.bio{
+    background-color: #FF7D00;
+    color: antiquewhite;
+    padding: 4px;
+    border-radius: 30px;
+    width: 40vw;
+    height: fit-content;
+    text-align: center; 
+    font-size: larger;
+}
+.menu{
+    background-color: #228E9F;
+    width: 40vw;
+    height: auto;
+    text-align: center;
+    border-radius: 30px;
+
+}
+.menuText:hover{
+    color: white;
+}
+.menuText{
+    text-decoration: none !important;
+    font-size: 2vw;
+    word-wrap: break-word;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: antiquewhite;
+    font-weight: bold;
+}
+.addressText{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.priceText{
+    margin-top: auto;
+    margin-bottom: auto;
+}
