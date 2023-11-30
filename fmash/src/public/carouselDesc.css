@@ -1,0 +1,22 @@
+.CarouselDesc{
+    background-color: #228E9F;
+    border-radius: 10px;
+}
+.DescPrice{
+    color: #FFECD1;
+}
+.DescFlavor{
+    color: #FFECD1;
+}
+.priceTag{
+    font-size: 35px;
+}
+.flavorTag{
+    font-size: 35px;
+}
+.priceTitle{
+    font-size: 50px;
+}
+.flavorTitle{
+    font-size: 50px;
+}

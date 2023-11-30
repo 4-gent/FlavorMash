@@ -1,15 +1,13 @@
 package com.flavormash.app;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-// Actual routing to make CRUD requests to the database
 
 @RestController
 @RequestMapping("/api/items")
@@ -20,7 +18,17 @@ public class ItemController {
     private MongoTemplate mongoTemplate;
 
     @GetMapping
-    public List<Item> getItems() {
-        return mongoTemplate.findAll(Item.class);
+    public List<Item> getItemsByName(@RequestParam(required = false) String name) {
+        // Build a query based on the provided name
+        Query query = new Query();
+        if (name != null) {
+            query.addCriteria(Criteria.where("name").is(name));
+        }
+
+        try {
+            return mongoTemplate.find(query, Item.class);
+        } catch (Exception e) {
+            throw new RuntimeException("Error getting items by name", e);
+        }
     }
 }

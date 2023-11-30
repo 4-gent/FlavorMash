@@ -1,49 +1,72 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navigation from '../components/Navigation';
+import '../public/match.css';
+import resImage from '../public/images/resImage.jpg';
 
 function changeBackground(color) {
   document.body.style.background = color;
 }
 
-const Match = () => {
-
-  const [items, setItems] = useState([]);
+const Match = ({ name }) => {
+  const [matchedItem, setMatchedItem] = useState(null);
 
   useEffect(() => {
-    // Define the URL of your Spring Boot backend
-    const apiUrl = 'http://localhost:8080/api/items'; // Replace with your actual URL
+    const apiUrl = 'http://localhost:8080/api/items';
 
-    // Make a GET request to fetch items from the backend
-    axios.get(apiUrl)
-      .then(response => {
-        // Handle the successful response
-        setItems(response.data);
+    axios
+      .get(apiUrl, { params: { name } })
+      .then((response) => {
+        setMatchedItem(response.data[0]); // Assuming the first item is the desired one
         console.log(response.data);
       })
-      .catch(error => {
-        // Handle errors
+      .catch((error) => {
         console.error('Error fetching items:', error);
       });
-  }, []); // The empty dependency array ensures that the effect runs only once on component mount
+  }, [name]);
 
-  window.addEventListener("load",function() { changeBackground('#FFF8EF') });
-  
-    return (
-      
-        <div>
-            <nav>
-                <Navigation />
-            </nav>
-            <h2>Item List</h2>
-            <ul style={{color:'black'}}>
-                {items.map(item => (
-                    <li key={item.id}>{item.name}, {item.bio}, {item.address}, {item.dish}</li>
-                ))}
-            </ul>
-            
+  window.addEventListener('load', function () {
+    changeBackground('#FFF8EF');
+  });
+
+  if (!matchedItem) {
+    return <div>Loading...</div>; // Handle loading state if needed
+  }
+
+  return (
+    <div>
+      <img
+        className="d-block resPicture"
+        src={resImage}
+        alt="Restaurant"
+      />
+      <h3 className='prompt'>We think you should try....</h3>
+      <h1 className="title">{matchedItem.name}</h1>
+      <br />
+      <br />
+      <div className="d-flex flex-row justify-content-around">
+        <div className="d-flex flex-column align-items-center">
+          <div className="menu">
+            <a className="menuText" href={matchedItem.menu} style={{textDecoration:'none'}}>{matchedItem.menu}</a>
+          </div>
+          <br />
+          <div className="d-flex flex-row justify-content-between">
+            <div className="grid-item address">
+              <p className='addressText'>{matchedItem.address}</p>
+            </div>
+            <br />
+            <div className="grid-item price">
+              <p className='priceText'>{matchedItem.price}</p>
+            </div>
+          </div>
+          <br />
+          <div className="bio d-flex flex-row">
+            <p>{matchedItem.bio}</p>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Match;
