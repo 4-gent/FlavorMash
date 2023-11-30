@@ -4,6 +4,8 @@ import Main from './main'
 import Swipe from './routes/swipe'
 import Match from './routes/match'
 import Preferences from './routes/preferences'
+import Flavor from './routes/flavor'
+import Cuisine from './routes/cuisine'
 
 export default function App(){
   return(
@@ -14,6 +16,8 @@ export default function App(){
         <Route exact path='/swipes' element={<Swipe />} />
         <Route exact path='/match' element={<Match />} />
         <Route exact path='/preferences' element={<Preferences />} />
+        <Route exact path='/preferences/flavor' element={<Flavor />} />
+        <Route exact path='/preferences/cuisine' element={<Cuisine />} />
       </Routes>
     </Router>
   )
