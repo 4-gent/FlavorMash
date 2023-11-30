@@ -41,7 +41,6 @@ const Match = () => {
                     <li key={item.id}>{item.name}, {item.bio}, {item.address}, {item.dish}</li>
                 ))}
             </ul>
-            hi
             
         </div>
     );

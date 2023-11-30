@@ -6,6 +6,7 @@ import Logo from "./images/FMLogo.png";
 const topBarStyle = {
     backgroundColor: "#228E9F", 
     color: 'white', 
+    height: '7vh'
 };
 
 const fontStyle = {

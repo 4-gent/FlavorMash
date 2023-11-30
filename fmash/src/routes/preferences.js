@@ -4,7 +4,8 @@ import BackNextButton from "../components/BackNextButton";
 import Title from "../components/Title";
 import '../components/Title.css';
 import PrefMiniButton from "../components/PrefMiniButton";
-import ColumnInfo from "../components/ColumnInfo";
+import ColumnLeft from "../components/ColumnLeft";
+import ColumnRight from "../components/ColumnRight";
 
 function changeBackground(color) {
     document.body.style.background = color;
@@ -17,23 +18,40 @@ function Preferences(){
         <div>
             {/* This is the file for the swiping */}
             <Navigation />
-            <Title title='PREFERENCES' />
-            <div className="d-flex p-3" style={{marginLeft: '50px', display: 'grid', gridTemplateColumns: '1fr auto 4fr', marginTop: '-70px'}}>
+            <Title title='PREFERENCES'/>
+            <div className="d-flex p-3" style={{marginLeft: '3vw', display: 'grid', gridTemplateColumns: 'auto auto auto', marginTop: '-4vh'}}>
+                <div style={{marginRight: '5vh'}}>
+                    <ColumnLeft />
+                </div>
+                <div style={{alignItems: 'center', marginRight: '6vw', height: '65vh'}}>
+                    <div style={{display: 'flex', marginTop: '2vh', marginBottom: '3vh', fontSize: '1.75vh', justifyContent: 'center'}}>
+                        <h1 style={{ 
+                            fontFamily: 'Signika', 
+                            fontSize: '3vh',
+                            color: '#228E9F',
+                            backgroundColor: '43FFFF',
+                            height: '4vh',
+                            width: '35vw',
+                            textAlign: 'center'}}>
+                            Rank how much you care about each trait! If you have no preference leave them at neutral!
+                        </h1>
+                    </div>
+                    <div>
+                        <PrefMiniButton prefType="FLAVOR" prefPage="http://localhost:3000/preferences/flavor" />
+                        <PrefMiniButton prefType="CUISINE" prefPage="http://localhost:3000/preferences/cuisine" />
+                        <PrefMiniButton prefType="PORTION SIZE"/>
+                        <PrefMiniButton prefType="DISTANCE"/>
+                        <PrefMiniButton prefType="PRICE"/>
+                    </div>
+                </div>
                 <div>
-                    <ColumnInfo />
+                    <ColumnRight />
                 </div>
-                <div style={{marginTop: '90px', marginLeft: '60px'}}>
-                    <PrefMiniButton prefType="FLAVOR" prefPage="http://localhost:3000/preferences/flavor" />
-                    <PrefMiniButton prefType="CUISINE" prefPage="http://localhost:3000/preferences/cuisine" />
-                    <PrefMiniButton prefType="PORTION SIZE" prefPage="http://localhost:3000/preferences/portion-size" />
-                    <PrefMiniButton prefType="DISTANCE" prefPage="http://localhost:3000/preferences/distance" />
-                    <PrefMiniButton prefType="PRICE" prefPage="http://localhost:3000/preferences/price" />
-                </div>
-                </div>
-            <div style={{marginTop: '-45px'}}>
+            </div>
+            <div style={{marginTop: '-8vh'}}>
                 <BackNextButton previous="http://localhost:3000/" next="http://localhost:3000/preferences/flavor"/>
             </div>
-            
+
         </div>
     )
 }

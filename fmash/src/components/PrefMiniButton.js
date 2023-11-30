@@ -1,45 +1,90 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
+import { styled } from '@mui/material/styles';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const NPfontStyle = {
     backgroundColor: '#FF7D00', 
     color:'#FFFFFF',
     fontFamily: 'Roboto', 
-    fontSize: '18px', 
-    height: '60px',
-    width: '250px', 
-    marginBottom: '50px',
+    fontSize: '2vh', 
+    height: '7vh',
+    width: '12vw', 
+    marginRight: '3vw',
 }
 
-function PrefMiniButton({prefType, prefPage}) {
-    const [value, setValue] = React.useState(30);
+const PrettoSlider = styled(Slider)({
+    color: '#FF7D00',
+    height: 8,
+    width: '15vw',
+    marginLeft: '2vw',
+    marginRight: '2vw',
+    '& .MuiSlider-track': {
+      border: 'none',
+    },
+    '& .MuiSlider-thumb': {
+      height: 24,
+      width: 24,
+      backgroundColor: '#fff',
+      border: '2px solid currentColor',
+      '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
+        boxShadow: 'inherit',
+      },
+      '&:before': {
+        display: 'none',
+      },
+    },
+    '& .MuiSlider-valueLabel': {
+      lineHeight: 1.2,
+      fontSize: 12,
+      background: 'unset',
+      padding: 10,
+      width: 32,
+      height: 32,
+      borderRadius: '50% 50% 50% 0',
+      backgroundColor: '#FF7D00',
+      transformOrigin: 'bottom left',
+      transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
+      '&:before': { display: 'none' },
+      '&.MuiSlider-valueLabelOpen': {
+        transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
+      },
+      '& > *': {
+        transform: 'rotate(45deg)',
+      },
+    },
+  });
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-    
+function PrefMiniButton({prefType, prefPage}) {
+
     return(
-        <div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2vh'}}>
             <Link to={prefPage}>
                 <Button 
+                    style={NPfontStyle}
                     as="input" 
                     type="button" 
                     value={prefType} 
                     size="lg" 
-                    style={NPfontStyle} 
                     variant="online-*"
                     active>
-                </Button>{' '}
+                </Button>
             </Link>
-            <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-                <Slider aria-label="Volume" value={value} onChange={handleChange} />
-            </Stack>
-            <Slider disabled defaultValue={30} aria-label="Disabled slider" />
-            
+            <FavoriteBorderIcon style={{ color: "228E9F"}}/>
+            <PrettoSlider
+                valueLabelDisplay="auto"
+                aria-label="pretto slider"
+                defaultValue={3}
+                min={1}
+                max={5}
+            />
+            <FavoriteIcon style={{ color: "228E9F"}}/>
         </div>
+    
+
     )
 }
 

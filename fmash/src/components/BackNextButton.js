@@ -6,18 +6,19 @@ const BNStyle = {
     fontFamily: 'Roboto', 
     fontSize: '18px', 
     color:'#FFFFFF',
-    height: '60px',
-    width: '150px'
+    height: '7vh',
+    width: '150px',
+    marginTop: '3vh'
 }
 
-const NPfontStyle = {
-    backgroundColor: '#FF7D00', 
-    fontFamily: 'Roboto', 
-    fontSize: '18px', 
-    color:'#FFFFFF',
-    height: '60px',
-    width: '250px'
-}
+// const NPfontStyle = {
+//     backgroundColor: '#FF7D00', 
+//     fontFamily: 'Roboto', 
+//     fontSize: '18px', 
+//     color:'#FFFFFF',
+//     height: '60px',
+//     width: '250px'
+// }
 
 function BackNextButton({previous, next}) {
     return (
@@ -35,7 +36,7 @@ function BackNextButton({previous, next}) {
                     />{' '}
             </Link>
             
-            {/* I need to make preferences click and unclick */}
+            {/* I need to make preferences click and unclick
             <Button 
                 href="/" 
                 as="input" 
@@ -45,7 +46,7 @@ function BackNextButton({previous, next}) {
                 style={NPfontStyle} 
                 variant="online-*"
                 active>
-            </Button>{' '}
+            </Button>{' '} */}
 
             <Link to={next}>
                 <Button 
