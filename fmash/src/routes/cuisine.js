@@ -42,7 +42,7 @@ function Cuisine(){
 
     window.addEventListener("load",function() { changeBackground('#FFF8EF') });
     return(
-        <div>
+        <div style={{backgroundColor: '#FFF8EF', height: '100vh'}}>
             <nav>
                 <Navigation />
             </nav>
