@@ -48,6 +48,7 @@ I have two different scripts in Bash that will work for Mac and a Windows Subyst
 
 - If you are on Mac
     In your teminal command line go to this directory: repo/fmash/
+    run this command first to make the file executable: sudo chmod +x initMac.sh
     run this command: sudo ./initMac.sh
 - If you are on Windows
     Use a linux command line not Command Prompt that isn't a Bash Shell
