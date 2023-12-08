@@ -7,7 +7,7 @@ import ZoomInMapIcon from '@mui/icons-material/ZoomInMap';
 import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import MoneyOffIcon from '@mui/icons-material/MoneyOff';
-
+//Displays on preferences screen
 const PortionMarks = [
     {
       value: 1,

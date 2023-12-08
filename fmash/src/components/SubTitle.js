@@ -1,6 +1,6 @@
 import React from 'react'
 import './Title.css';
-
+//Defines subtitle headings
 function Title({title, fs}) {
     return (
         <div className="Title">

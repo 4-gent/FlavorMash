@@ -1,6 +1,6 @@
 import React from 'react'
 import './Title.css';
-
+//Defines Title headings
 function Title({title}) {
     return (
       <div className="Title">

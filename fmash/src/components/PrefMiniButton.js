@@ -15,7 +15,7 @@ const NPfontStyle = {
     width: '12vw', 
     marginRight: '3vw',
 }
-
+//Displays the sliders used in the webpage
 const PrettoSlider = styled(Slider)({
     color: '#FF7D00',
     height: 8,

@@ -1,6 +1,6 @@
 import React from 'react';
 import FMLogo from './images/FMLogo.png'
-
+//different font styles used
 const fontStyle1 = {
     backgroundColor: '#228E9F', 
     color:'#FFECD1',
@@ -34,7 +34,7 @@ const columnStyle = {
     justifyContent: 'center',
 
 }
-
+//Displays homescreen
 function ColumnLeft() {
     return(
         <div style={columnStyle}>

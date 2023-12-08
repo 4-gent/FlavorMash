@@ -37,7 +37,7 @@ const Fstyle = {
     display: 'flex',
     height: '7vh',
 };
-
+//allows user to choose which genre of cuisine they want with yes/no buttons
 function Cuisine(){
 
     window.addEventListener("load",function() { changeBackground('#FFF8EF') });

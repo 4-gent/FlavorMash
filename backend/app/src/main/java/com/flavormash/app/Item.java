@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Restaurants")
 public class Item {
+    // Each restaurant "Item" will have the following traits as fields
     @Id
     private String id;
     private String name;

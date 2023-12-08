@@ -1,6 +1,6 @@
 import React from "react";
 import '../public/carouselDesc.css';
-
+//Information below the slideshow in the MATCH screen that shows price and flavor
 class CarouselDesc extends React.Component{
     render(){
         return(

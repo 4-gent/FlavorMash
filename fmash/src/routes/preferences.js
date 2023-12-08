@@ -10,6 +10,7 @@ import ColumnRight from "../components/ColumnRight";
 function changeBackground(color) {
     document.body.style.background = color;
 }
+//Displays Preferences screen
 
 function Preferences(){
 

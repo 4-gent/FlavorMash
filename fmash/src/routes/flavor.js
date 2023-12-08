@@ -39,7 +39,7 @@ const Fstyle = {
     placeItems: 'center',
     height: '26vh'
 };
-
+//allows user to choose which flavors they want with Yes/No buttons
 function Flavor(){
 
     window.addEventListener("load",function() { changeBackground('#FFF8EF') });

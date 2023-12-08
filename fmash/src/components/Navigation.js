@@ -14,7 +14,7 @@ const fontStyle = {
     fontSize: '15px', 
     color:'#FFFFFF'
 }
-
+//Allows user to navigate between different sections of the webpage
 function Navigation() {
     return (
         <div>

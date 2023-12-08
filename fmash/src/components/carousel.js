@@ -6,6 +6,8 @@ import '../public/carousel.css';
 import CarouselDesc from "./carouselDesc";
 import Match from "../routes/match";
 
+//Code for the matching screen, when the images cycle between different restaurants
+
 class SwipeCarousel extends Component {
     state = {
         match: null,
@@ -17,14 +19,14 @@ class SwipeCarousel extends Component {
         menu: '',
         redirect: false,
     }
-
+    //names of the restaurants in the database
     pictureNames = ['republique', `l'antica pizzeria da michele`, 'hangari kalguksu', 'granville', 'running goose'];
 
     handleCarouselItemClick = (index) => {
         const restaurantName = this.pictureNames[index];
         this.setState({ selectedItem: index, resName: restaurantName });
     }
-
+    //compiles results for when the mash button is clicked
     handleMashButtonClick = () => {
         const { selectedItem } = this.state;
         const selectedName = this.pictureNames[selectedItem];
@@ -44,7 +46,7 @@ class SwipeCarousel extends Component {
                 console.error('API Error:', error);
             });
     }
-
+    //renders the images in the slideshow
     render() {
         const { imgOne, imgTwo, imgThree, imgFour, imgFive } = this.props;
         const { redirect, selectedItem } = this.state;

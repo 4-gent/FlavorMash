@@ -11,7 +11,7 @@ import fett from '../public/images/fett.jpg';
 function changeBackground(color) {
     document.body.style.background = color;
 }
-
+//Display for the images used in the slideshow on the Match screen
 function Swipe(){
 
     window.addEventListener("load",function() { changeBackground('#FFF8EF') });

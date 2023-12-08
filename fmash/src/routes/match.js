@@ -3,7 +3,7 @@ import axios from 'axios';
 import Navigation from '../components/Navigation';
 import '../public/match.css';
 import resImage from '../public/images/resImage.jpg';
-
+//Displays match screen
 const Match = ({ name, address, price, bio, menu }) => {
   return (
     <div style={{ backgroundColor: '#FFF8EF', height: '100vh' }}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import FMLogo from './images/FMLogo.png'
-
+//Code for the different founds used, and to set the correct background color
 const NPfontStyle = {
     backgroundColor: '#228E9F', 
     color:'#FFECD1',
@@ -27,7 +27,7 @@ const columnStyle = {
     borderRadius: "10px",
     width: '400px'
 }
-
+//Displays the information shown on the preferences screen
 function ColumnInfo() {
     return(
         <div style={columnStyle}>
