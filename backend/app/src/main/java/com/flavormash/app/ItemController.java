@@ -18,7 +18,7 @@ public class ItemController {
     private MongoTemplate mongoTemplate;
 
     @GetMapping
-    public List<Item> getItemsByName(@RequestParam(required = false) String name) {
+    public Item getItemByName(@RequestParam(required = false) String name) {
         // Build a query based on the provided name
         Query query = new Query();
         if (name != null) {
@@ -26,9 +26,10 @@ public class ItemController {
         }
 
         try {
-            return mongoTemplate.find(query, Item.class);
+            System.out.println(mongoTemplate.findOne(query, Item.class));
+            return mongoTemplate.findOne(query, Item.class);
         } catch (Exception e) {
-            throw new RuntimeException("Error getting items by name", e);
+            throw new RuntimeException("Error getting item by name", e);
         }
     }
 }

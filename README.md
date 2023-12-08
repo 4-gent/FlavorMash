@@ -1,4 +1,4 @@
-# FlavorMatch
+# FlavorMash
 CS151 Food Tinder Project
 
 Team #4, William Qiao, Marlon Burog, Anne Mai, Lucas Maldonado

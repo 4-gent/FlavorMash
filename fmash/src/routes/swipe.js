@@ -16,7 +16,7 @@ function Swipe(){
 
     window.addEventListener("load",function() { changeBackground('#FFF8EF') });
     return(
-        <div>
+        <div style={{backgroundColor: '#FFF8EF', height: '100vh'}}>
             {/* This is the file for the swiping */}
             <nav>
                 <Navigation />
