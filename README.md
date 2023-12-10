@@ -33,12 +33,27 @@ Repo /* Only marking down names you will need to know (+ is a directory, - is a 
     + src
         + components
             - carousel.js /* Carousel used to mimic the swiping, right arrow will switch to match */
+            - Navigation.js /* This is the navigation bar at the top */
+            /* The following are buttons that help the user to move forward/backward, read the title, or customise their options*/
+            - YesNoButton.js 
+            - PrefMini.Button.js
+            - FlavorBox.js
+            - Title.js
+            - SubTitle.js
+            / * These helped make the columns on the pages * /
+            - ColumnInfo.js
+            - ColumnLeft.js
+            - ColumnRight.js
+            - flavors /* logo images */
         + public
             + images
             - different css files
         + routes
             - match.js /* What user sees after they match with a dish */ 
             - swipe.js /* The file that holds carousel and what the user will do their swiping on */
+            - flavor.js /* the page that has all of the flavors to pick out */
+            - cuisine.js /* the cusisine selection page*/
+            - preferences /* users picking their preferences for the dish they will select*/
         - main.js /* Home page file */
 
 ### How to Run 
