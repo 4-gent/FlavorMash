@@ -10,6 +10,8 @@ Functionality: We will help people find restaurants that they will enjoy by maki
 High Level Description: By using traits of the restaurant such as genre of food, price, and popularity, we will create a stack that users can scroll through based on their preferences. The most compatible restaurants will be at the top of the stack, while the least compatible will be at the bottom. We will continually update the stack based on a user's preferences, and if they swipe left or right on certain restaurants. We will create a database and quantify different traits of restaurants, and assign a weighted score to each trait. By adding up the score, we can create a back-end compatibility rating that we will use to create and update the stack for the user. The stack that we will be using will be the built in Stack from Java JDK. We will create a custom class "Restaurant" and fill the stack with instances of this class. Every time the user swipes, we will pop the top of the stack, and if the stack is empty, then the user will have to wait or let the algorithm run again to repopulate the stack.
 
 Working Demo: https://youtu.be/F5PqoVzqAew 
+UML Class Diagram: https://drive.google.com/file/d/1gGpqCM0DfEa8iOGEMfAJMCc6PObjmUwy/view?usp=sharing 
+Google Slides Presentation: https://docs.google.com/presentation/d/14l6Q1STaT1vTelQB_P3EeZ9c2Y_is_5Jo5t6Gyfiyik/edit?usp=sharing 
 
 # Repo Information
 
@@ -57,10 +59,6 @@ Repo /* Only marking down names you will need to know (+ is a directory, - is a 
             - cuisine.js /* the cusisine selection page*/
             - preferences /* users picking their preferences for the dish they will select*/
         - main.js /* Home page file */
-
-# UML Class Diagram
-
-![image](https://github.com/4-gent/FlavorMash/assets/109831697/ee020f5f-3fa1-4aa7-a255-3f1084948a75)
 
 ### How to Run 
 In order to start up the development environment, you need to setup the development enviroment itself
