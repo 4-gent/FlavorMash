@@ -58,6 +58,10 @@ Repo /* Only marking down names you will need to know (+ is a directory, - is a 
             - preferences /* users picking their preferences for the dish they will select*/
         - main.js /* Home page file */
 
+# UML Class Diagram
+
+![image](https://github.com/4-gent/FlavorMash/assets/109831697/ee020f5f-3fa1-4aa7-a255-3f1084948a75)
+
 ### How to Run 
 In order to start up the development environment, you need to setup the development enviroment itself
 
