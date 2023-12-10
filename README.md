@@ -5,9 +5,11 @@ Team #4, William Qiao, Marlon Burog, Anne Mai, Lucas Maldonado
 
 Problem: It's hard to find good restaurants nowdays. People don't know where to eat.
 
-Functionality: We will help people find restaurants that they will enjoy by making an app similar to Tinder, but with restaurants instead of people. Our application helps indecisive users pick a food option that is catered to what they are craving in the present moment. 
+Functionality: We will help people find restaurants that they will enjoy by making an app similar to Tinder, but with restaurants instead of people. 
 
 High Level Description: By using traits of the restaurant such as genre of food, price, and popularity, we will create a stack that users can scroll through based on their preferences. The most compatible restaurants will be at the top of the stack, while the least compatible will be at the bottom. We will continually update the stack based on a user's preferences, and if they swipe left or right on certain restaurants. We will create a database and quantify different traits of restaurants, and assign a weighted score to each trait. By adding up the score, we can create a back-end compatibility rating that we will use to create and update the stack for the user. The stack that we will be using will be the built in Stack from Java JDK. We will create a custom class "Restaurant" and fill the stack with instances of this class. Every time the user swipes, we will pop the top of the stack, and if the stack is empty, then the user will have to wait or let the algorithm run again to repopulate the stack.
+
+Solution: Our application helps indecisive users pick a food option that is catered to what they are craving in the present moment. Based on what flavor, price, cuisine, and more you're feeling up to, Flavor Mash uses it's algorithm to find the best match for you. It will populate the best personal matches and you can swipe left until you find the right choice for you. Swiping rights lands you on the match page where you will get the details of the restuarant, price, and location. 
 
 Working Demo: https://youtu.be/F5PqoVzqAew 
 
